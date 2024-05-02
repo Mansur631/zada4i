@@ -17,10 +17,6 @@ def word_frequency(word, dictionary):
     return None
 
 
-
-
-
-
 # print(count_words("Вы можете изменить Вы логику функции в зависимости"))
 dictionary = count_words("Вы можете изменить Вы логику функции в зависимости")
-print(word_frequency("Можете",dictionary))
+print(word_frequency("Можете", dictionary))
