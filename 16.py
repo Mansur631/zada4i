@@ -29,9 +29,19 @@ def count_high_grades(my_list_grade):
     return len(new_list_grade)
 
 
+def average_grade(my_list_students):
+    grade_list = []
+    for grade in my_list_students[1:]:
+        grade_list.append(int(grade[2]))
+    size = int(len(grade_list))
+    total = sum(grade_list)
+    grade_average = total / size
+    return grade_average
+
 
 my_list = read_from_file(file)
 big_age = filter_adults(my_list)
 student_grade = count_high_grades(my_list)
+all_students = average_grade(my_list)
 
 file.close()
