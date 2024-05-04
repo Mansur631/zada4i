@@ -13,16 +13,25 @@ def is_adult(age):
     return int(age) >= 18
 
 
-def filter_adults(my_list):
-    new_my_list = []
-    for elements in my_list[1:]:
+def filter_adults(my_list_age):
+    new_my_list_age = []
+    for elements in my_list_age[1:]:
         if is_adult(elements[1]):
-            new_my_list.append(elements)
-    return new_my_list
+            new_my_list_age.append(elements)
+    return new_my_list_age
+
+
+def count_high_grades(my_list_grade):
+    new_list_grade = []
+    for student in my_list_grade[1:]:
+        if int(student[2]) >= 80:
+            new_list_grade.append(student)
+    return len(new_list_grade)
+
 
 
 my_list = read_from_file(file)
 big_age = filter_adults(my_list)
-print(big_age)
+student_grade = count_high_grades(my_list)
 
 file.close()
