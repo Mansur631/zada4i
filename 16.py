@@ -47,13 +47,10 @@ def above_average_students(my_good_students):
     return good_students
 
 
-
 my_list = read_from_file(file)
 big_age = filter_adults(my_list)
 student_grade = count_high_grades(my_list)
 all_students = average_grade(my_list)
 good_students = above_average_students(my_list)
-
-
 
 file.close()
